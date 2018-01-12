@@ -34,7 +34,7 @@ inquirer.prompt([
             myuserReq = results[i];
                 
             if(results[i].stock_quantity < userReq.quantity){
-               console.log("Out of Stock!");
+               console.log("You've asked for too many or we are out of stock!");
                 start();
                }else if(results[i].stock_quantity >= userReq.quantity){
             price(userReq.quantity, myuserReq.price );
@@ -49,7 +49,7 @@ inquirer.prompt([
 function price(quan, p){
     var total = quan * p;
     console.log("each cost $"+p);
-    console.log("you want to buy this " +quan+ "many");
+    console.log("you want to buy " +quan);
     console.log("Your TOTAL is: $" + total);
 };
 

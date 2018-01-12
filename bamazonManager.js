@@ -96,8 +96,10 @@ function addInv() {
                 function(err, res) {
                 if(err)throw err;
                 console.log("inventory amount changed");
-            })
-connection.end();
+                
+            });
+            
+
         })
     }) 
 };
@@ -131,8 +133,9 @@ function addNewProduct(){
             }, function(err) {
                 if (err) throw err;
                 console.log("Product added");
-                    connection.end();
-            })
+                    
+            });
+          
         })
     })
 };
